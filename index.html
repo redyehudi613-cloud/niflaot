@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIFLAOT LLC - Jewish Digital Solutions</title>
+  <meta name="description" content="NIFLAOT LLC creates beautiful digital tools to enrich Jewish life and learning.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d0b08;
+      --text: #f5f0e6;
+      --gold: #d4af37;
+      --gold-light: rgba(212, 175, 55, 0.2);
+      --accent: #c9a55c;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      background: 
+        radial-gradient(ellipse at top, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    }
+    
+    .logo {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    
+    .logo-hebrew {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+    
+    .tagline {
+      font-size: 1.25rem;
+      color: var(--text);
+      opacity: 0.8;
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+    
+    .hero-product {
+      background: linear-gradient(135deg, var(--gold-light), transparent);
+      border: 1px solid var(--gold);
+      border-radius: 1rem;
+      padding: 2rem 3rem;
+      max-width: 400px;
+      margin-bottom: 3rem;
+    }
+    
+    .product-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    .product-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .product-desc {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg);
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+    
+    /* About Section */
+    .about {
+      padding: 5rem 2rem;
+      background: rgba(255,255,255,0.02);
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .about-text {
+      font-size: 1.1rem;
+      opacity: 0.85;
+      text-align: center;
+      line-height: 1.8;
+    }
+    
+    /* Features */
+    .features {
+      padding: 5rem 2rem;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .feature-card {
+      background: var(--gold-light);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .feature-title {
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    
+    .feature-desc {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--gold-light);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+    
+    .copyright {
+      font-size: 0.85rem;
+      opacity: 0.6;
+    }
+    
+    /* Responsive */
+    @media (max-width: 600px) {
+      .logo {
+        font-size: 2.5rem;
+      }
+      .logo-hebrew {
+        font-size: 1.5rem;
+      }
+      .hero-product {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <h1 class="logo">NIFLAOT</h1>
+    <p class="logo-hebrew">נפלאות</p>
+    <p class="tagline">Creating beautiful digital tools to enrich Jewish life, learning, and connection.</p>
+    
+    <div class="hero-product">
+      <div class="product-icon">📖✨</div>
+      <h2 class="product-name">Torah Tab</h2>
+      <p class="product-desc">Daily Torah verses, commentaries, and inspiration on every new browser tab.</p>
+      <a href="https://chrome.google.com/webstore" class="cta-btn">Get the Extension</a>
+    </div>
+  </section>
+  
+  <!-- About -->
+  <section class="about">
+    <div class="container">
+      <h2 class="section-title">About Us</h2>
+      <p class="about-text">
+        NIFLAOT LLC ("Wonders" in Hebrew) is dedicated to creating technology that brings the beauty and wisdom of Torah into everyday life. We believe that moments of inspiration should be seamlessly woven into the digital spaces where people spend their time.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">What We Build</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🕎</div>
+          <h3 class="feature-title">Jewish Content</h3>
+          <p class="feature-desc">Torah verses, commentaries, and insights from classical and Chassidic sources.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3 class="feature-title">Beautiful Design</h3>
+          <p class="feature-desc">Elegant, thoughtful interfaces that honor the content they present.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⏰</div>
+          <h3 class="feature-title">Daily Integration</h3>
+          <p class="feature-desc">Zmanim, Shabbat times, and Jewish calendar seamlessly integrated.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💝</div>
+          <h3 class="feature-title">Tzedakah & Giving</h3>
+          <p class="feature-desc">Easy access to support worthy Jewish causes and organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="mailto:support@niflaot.com">Contact Us</a>
+    </div>
+    <p class="copyright">© 2024 NIFLAOT LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
